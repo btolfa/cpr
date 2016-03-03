@@ -37,6 +37,13 @@ namespace cpr {
         priv::set_option(session, std::forward<Ts>(ts)...);
         return session.Get();
     }
+	
+	template <typename... Ts>
+	Response Get(Session& sess, Ts&&... ts)
+	{
+		priv::set_option(sess, std::forward<Ts>(ts)...);
+		return sess.Get();
+	}
 
     // Get async methods
     template <typename... Ts>
@@ -61,6 +68,13 @@ namespace cpr {
         priv::set_option(session, std::forward<Ts>(ts)...);
         return session.Post();
     }
+	
+	template <typename... Ts>
+	Response Post(Session& sess, Ts&&... ts)
+	{
+		priv::set_option(sess, std::forward<Ts>(ts)...);
+		return sess.Post();
+	}
 
     // Post async methods
     template <typename... Ts>
