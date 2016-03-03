@@ -7,7 +7,7 @@
 
 
 struct Parameter {
-    Parameter(const std::string& key, const std::string& value) : key{key}, value{value} {}
+    Parameter(const std::string& key, const std::string& value) : key(key), value(value) {}
 
     std::string key;
     std::string value;

@@ -7,7 +7,7 @@
 class Authentication {
   public:
     Authentication(const std::string& username, const std::string& password) :
-        username_{username}, password_{password}, auth_string_{username + ":" + password} {}
+        username_(username), password_(password), auth_string_(username + ":" + password) {}
 
     const char* GetAuthString() const;
 
